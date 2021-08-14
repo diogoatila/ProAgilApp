@@ -12,9 +12,9 @@ namespace ProAgil.WebAPI.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<Evento>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return 
         }
 
         // GET api/values/5
