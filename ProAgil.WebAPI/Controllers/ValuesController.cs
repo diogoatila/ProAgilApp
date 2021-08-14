@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ProAgil.WebAPI.Model;
 
 namespace ProAgil.WebAPI.Controllers
 {
@@ -14,7 +15,7 @@ namespace ProAgil.WebAPI.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Evento>> Get()
         {
-            return 
+            return new Evento[] {  };
         }
 
         // GET api/values/5

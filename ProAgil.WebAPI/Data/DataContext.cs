@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using ProAgil.WebAPI.Controllers;
+using ProAgil.WebAPI.Model;
 
 namespace ProAgil.WebAPI.Data
 {
@@ -7,6 +9,7 @@ namespace ProAgil.WebAPI.Data
 
         public DataContext(DbContextOptions<DataContext> options) : base (options){}
        
+        public DbSet<Evento> Eventos { get; set; }
         
     }
 }

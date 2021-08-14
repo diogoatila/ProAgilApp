@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Estudos\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj": {}
+    "C:\\Estudos\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj": {}
   },
   "projects": {
-    "c:\\Estudos\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj": {
+    "C:\\Estudos\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Estudos\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj",
+        "projectUniqueName": "C:\\Estudos\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj",
         "projectName": "ProAgil.WebAPI",
-        "projectPath": "c:\\Estudos\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj",
+        "projectPath": "C:\\Estudos\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj",
         "packagesPath": "C:\\Users\\ModalGR\\.nuget\\packages\\",
-        "outputPath": "c:\\Estudos\\ProAgil.WebAPI\\obj\\",
+        "outputPath": "C:\\Estudos\\ProAgil.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
