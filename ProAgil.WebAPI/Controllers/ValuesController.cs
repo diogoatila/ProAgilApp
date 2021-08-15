@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProAgil.WebAPI.Data;
 using ProAgil.WebAPI.Model;
 
@@ -22,25 +23,30 @@ namespace ProAgil.WebAPI.Controllers
 
         // GET api/values
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            try
-            {
-                var results = _context.Eventos.ToList();
-                return Ok (results);
-            }
-            catch(System.Exception)
-            {
-                this.StatusCode(StatusCodes.Status500InternalServerError, "Falha na requisição ao banco de dados");
-            }
            
+               var results = await _context.Eventos.ToListAsync();
+
+               if(results.Count != 0)
+                return Ok(results);
+
+                //Erro
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha na requisição ao banco de dados");
+ 
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return "value";
+             var results = await _context.Eventos.FirstOrDefaultAsync(e => e.EventoID == id);
+
+               if(results != null)
+                return Ok(results);
+
+                //Erro
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha na requisição ao banco de dados");
         }
 
         // POST api/values
